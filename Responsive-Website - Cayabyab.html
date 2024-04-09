@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shampoo Survey</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    @media screen and (max-width: 600px) {
+        .container {
+            width: 90%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Shampoo Survey</h2>
+    <p>Thank you for taking the time to share your thoughts with us. Your feedback will help us create shampoos that cater to your needs better. 
+        Let's dive in and make your hair care routine even more fabulous!</p>
+    <form id="surveyForm">
+        <label for="lastName">Last name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="firstName">First name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="middleName">Middle name (optional):</label>
+        <input type="text" id="middleName" name="middleName">
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label>How frequently do you incorporate our shampoo into your hair care routine?</label>
+        <div>
+            <input type="radio" id="daily" name="frequency" value="Daily" required>
+            <label for="daily">Daily</label><br>
+            <input type="radio" id="everyOtherDay" name="frequency" value="Every other day">
+            <label for="everyOtherDay">Every other day</label><br>
+            <input type="radio" id="2to3Times" name="frequency" value="2-3 times a week">
+            <label for="2to3Times">2-3 times a week</label><br>
+            <input type="radio" id="onceAWeek" name="frequency" value="Once a week">
+            <label for="onceAWeek">Once a week</label><br>
+            <input type="radio" id="lessThanOnce" name="frequency" value="Less than once a week">
+            <label for="lessThanOnce">Less than once a week</label><br>
+        </div>
+
+        <label>What specific attributes of our shampoo do you find most beneficial?</label>
+        <div>
+            <input type="checkbox" id="cleansing" name="attributes" value="Cleansing properties">
+            <label for="cleansing">Cleansing properties</label><br>
+
+            <input type="checkbox" id="Moisturizing effects" name="attributes" value="Moisturizing effects">
+            <label for="Moisturizing effects">Moisturizing effects</label><br>
+
+            <input type="checkbox" id="Volume-boosting" name="attributes" value="Volume-boosting">
+            <label for="Volume-boosting">Volume-boosting</label><br>
+
+            <input type="checkbox" id="Scent" name="attributes" value="Scent">
+            <label for="cleansing">Scent</label><br>
+
+            <input type="checkbox" id="Scalp care" name="attributes" value="Scalp care">
+            <label for="Scalp care">Scalp care</label><br>
+        </div>
+
+        <label>In what ways do you perceive our shampoo compared to similar offerings from other brands?</label>
+        <div>
+            <input type="checkbox" id="Superior quality" name="attributes" value="Superior quality">
+            <label for="cleansing">Superior quality</label><br>
+
+            <input type="checkbox" id="Better scent" name="attributes" value="Better scent">
+            <label for="Better scent">Better scent</label><br>
+
+            <input type="checkbox" id="More effective results" name="attributes" value="More effective results            ">
+            <label for="More effective results">More effective results</label><br>
+
+            <input type="checkbox" id="Better pricing" name="attributes" value="Better pricing">
+            <label for="Better pricing">Better pricing</label><br>
+
+            <input type="checkbox" id="Similar to competitors" name="attributes" value="Similar to competitors">
+            <label for="Similar to competitors">Similar to competitors</label><br>
+        </div>
+
+        <label>Are there any significant functionalities or characteristics that you believe our shampoo lacks?</label>
+        <div>
+            <input type="checkbox" id="More natural ingredients" name="attributes" value="More natural ingredients">
+            <label for="More natural ingredients">More natural ingredients</label><br>
+
+            <input type="checkbox" id="Improved lather" name="attributes" value="Improved lather">
+            <label for="Improved lather">Improved lather</label><br>
+
+            <input type="checkbox" id="Enhanced fragrance options" name="attributes" value="Enhanced fragrance options">
+            <label for="Enhanced fragrance options">Enhanced fragrance options</label><br>
+
+            <input type="checkbox" id="Specialized formulas" name="attributes" value="Specialized formulas">
+            <label for="Specialized formulas">Specialized formulas</label><br>
+
+            <input type="checkbox" id="" name="attributes" value="">
+            <label for=""></label><br>
+        </div>
+
+        <label>What specific haircare concerns are you aiming to address by using our shampoo?</label>
+        <div>
+            <input type="checkbox" id="Dandruff" name="attributes" value="Dandruff">
+            <label for="Dandruff">Dandruff</label><br>
+
+            <input type="checkbox" id="Dryness" name="attributes" value="Dryness">
+            <label for="Dryness">Dryness</label><br>
+
+            <input type="checkbox" id="Oily scalp" name="attributes" value="Oily scalp">
+            <label for="Oily scalp">Oily scalp</label><br>
+
+            <input type="checkbox" id="Frizz control" name="attributes" value="Frizz control">
+            <label for="Frizz control">Frizz control</label><br>
+
+            <input type="checkbox" id="Damage repair" name="attributes" value="Damage repair">
+            <label for="Damage repair">Damage repair</label><br>
+
+            <input type="checkbox" id="Color protection" name="attributes" value="Color protection">
+            <label for="Color protection">Color protection</label><br>
+        </div>
+
+        <label>How intuitive do you find the application and usage of our shampoo?</label>
+        <div>
+            <input type="checkbox" id="Very intuitive" name="attributes" value="Very intuitive">
+            <label for="Very intuitive">Very intuitive</label><br>
+
+            <input type="checkbox" id="Somewhat intuitive" name="attributes" value="Somewhat intuitive">
+            <label for="Somewhat intuitive">Somewhat intuitive</label><br>
+
+            <input type="checkbox" id="Neutral" name="attributes" value="Neutral">
+            <label for="Neutral `">Neutral</label><br>
+
+            <input type="checkbox" id="Somewhat challenging" name="attributes" value="Somewhat challenging">          
+            <label for="Somewhat challenging"></label>Somewhat challenging<br>
+
+            <input type="checkbox" id="Very challenging" name="attributes" value="Very challenging">
+            <label for="Very challenging"></label><br>
+        </div>
+
+        <label>How would you rate the cost-effectiveness of our shampoo?</label>
+        <div>
+            <input type="checkbox" id="Excellent" name="attributes" value="Excellent">
+            <label for="Excellent">Excellent</label><br>
+
+            <input type="checkbox" id="Good" name="attributes" value="Good">
+            <label for="Good">Good</label><br>
+
+            <input type="checkbox" id="Fair" name="attributes" value="Fair">
+            <label for="Fair">Fair</label><br>
+
+            <input type="checkbox" id="Poor" name="attributes" value="Poor">
+            <label for="Poor">Poor</label><br>
+        </div>
+
+        
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
